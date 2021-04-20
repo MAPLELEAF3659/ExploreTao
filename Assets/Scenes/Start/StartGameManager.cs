@@ -6,12 +6,17 @@ using UnityEngine.UI;
 
 public class StartGameManager : MonoBehaviour
 {
-    public Button clanBtn, clothBtn;
     public Text version;
+
+    public void beginBtnOnClick()
+    {
+        SceneManager.LoadScene("BeginAnimation");
+    }
     public void clanBtnOnClick()
     {
         SceneManager.LoadScene("SelectClan");
     }
+
     public void clothBtnOnClick()
     {
         SceneManager.LoadScene("Cloth");
