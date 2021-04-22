@@ -14,12 +14,14 @@ public class DialogueController : MonoBehaviour
     public float textSpeed;
     public bool isEnd, isFinish = true;
 
+    public GameObject gameManager;
+
     void Start()
     {
         names = new Queue<string>();
         sentences = new Queue<string>();
         speakers = new Queue<Sprite>();
-
+        gameManager = GameObject.FindGameObjectWithTag ("GameManager");
     }
 
     void Update()
@@ -60,6 +62,7 @@ public class DialogueController : MonoBehaviour
         {
             chatBoxAni.SetBool("toggle", false);
             isEnd = true;
+            print("[System]Dialogue is end");
             return;
         }
         else if (!isFinish)
@@ -74,7 +77,7 @@ public class DialogueController : MonoBehaviour
     }
     IEnumerator TypeSentence(string name, string sentence, Sprite speakerSp)
     {
-        print("[System]Dialogue:" + name + "," + sentence);
+        print("[System]Dialogue - " + name + ":" + sentence);
         isFinish = false;
 
         if (speakerSp == null)
@@ -87,6 +90,10 @@ public class DialogueController : MonoBehaviour
 
         cName.text = name;
         cText.text = null;
+
+        if (name.Contains("*NEXT*"))
+            gameManager.SendMessage("Next");
+
         foreach (char letter in sentence.ToCharArray())
         {
             if (isFinish)
