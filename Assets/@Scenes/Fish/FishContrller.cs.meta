@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: d52fa5bf410bf1f409fb5031c8550a17
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gameManager: {instanceID: 0}
+  - expParticle: {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

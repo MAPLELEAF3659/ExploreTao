@@ -9,7 +9,7 @@ public class BeginAniGameManager : MonoBehaviour
     public DialogueController dialogueController;
     public Dialogue firstD, godD, findFoodD, notGoodD;
     public Animator beginAni, loadingAni;
-    public GameObject pot, fire, fish, crab, shell;
+    public GameObject pot, fire, fish, crab, shell,flyFish;
     public Text loadingText;
 
     void Start()
@@ -37,7 +37,11 @@ public class BeginAniGameManager : MonoBehaviour
         dialogueController.StartDialogue(godD);
         yield return new WaitUntil(() => dialogueController.isEnd);
         beginAni.SetTrigger("next");
+        yield return new WaitForSeconds(0.5f);
+        loadingText.text = "你下凡到了蘭嶼小島...";
+        loadingAni.SetTrigger("fade");
         yield return new WaitForSeconds(1.5f);
+        loadingAni.SetTrigger("fade");
         beginAni.SetTrigger("next");
 
         dialogueController.StartDialogue(findFoodD);
@@ -46,7 +50,7 @@ public class BeginAniGameManager : MonoBehaviour
 
         loadingText.text = "吃飽了之後...";
         loadingAni.SetTrigger("fade");
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.5f);
         loadingAni.SetTrigger("fade");
 
         dialogueController.StartDialogue(notGoodD);
@@ -58,13 +62,15 @@ public class BeginAniGameManager : MonoBehaviour
 
     IEnumerator PotAni()
     {
-        GenAroundCamera(pot, 0, -2, 5);
+        GenAroundCamera(pot, 0, -1, 5);
         yield return new WaitForSeconds(1f);
-        GenAroundCamera(shell, 0.5f, 0, 3);
+        GenAroundCamera(shell, 0.5f, 1, 4);
         yield return new WaitForSeconds(0.5f);
-        GenAroundCamera(fish, 0, 0, 3);
+        GenAroundCamera(fish, 0, 1, 4);
         yield return new WaitForSeconds(0.5f);
-        GenAroundCamera(crab, -0.5f, 0, 3);
+        GenAroundCamera(crab, -0.5f, 1, 4);
+        yield return new WaitForSeconds(0.5f);
+        GenAroundCamera(flyFish, 0, 0, 3);
         yield return new WaitUntil(() => dialogueController.isEnd);
         GameObject[] foods = GameObject.FindGameObjectsWithTag("Food");
         foreach (GameObject temp in foods)
@@ -78,5 +84,10 @@ public class BeginAniGameManager : MonoBehaviour
         Instantiate(obj, Camera.main.transform.position + Camera.main.transform.right * x
             + Camera.main.transform.up * y + Camera.main.transform.forward * z,
             Camera.main.transform.rotation);
+    }
+
+    public void BackBtn()
+    {
+        SceneManager.LoadScene("start");
     }
 }

@@ -6,20 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/@Scenes/Start.unity
+    path: Assets/@Scenes/1Start/Start.unity
     guid: d7762a1eeea9f58458031d110b76b224
-  - enabled: 0
-    path: Assets/@Scenes/SelectClan.unity
-    guid: 454a28f726430204484d69244cc7fe2a
-  - enabled: 0
-    path: Assets/@Scenes/Cloth.unity
-    guid: cd9efe9516c461a46aefee841e63d57b
   - enabled: 1
-    path: Assets/@Scenes/BeginAnimation.unity
+    path: Assets/@Scenes/BeginAni/BeginAnimation.unity
     guid: 3c88c765fa58bc347aaac5a333a0610e
   - enabled: 1
-    path: Assets/@Scenes/Boat.unity
+    path: Assets/@Scenes/Boat/Boat.unity
     guid: 3d62f6ba828cce043813025084495f6a
+  - enabled: 1
+    path: Assets/@Scenes/Fish/Fish.unity
+    guid: dd727753a6d1cf6488b2aad9982b0d19
+  - enabled: 1
+    path: Assets/@Scenes/House/House.unity
+    guid: e8d6514d387423c46818b2a19155ec08
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

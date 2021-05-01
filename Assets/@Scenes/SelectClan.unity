@@ -477,7 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedLibrary: {fileID: 11400000, guid: 322858c920cce614e8b31ef1436768f1,
     type: 2}
-  m_MaxNumberOfMovingImages: 4
+  m_MaxNumberOfMovingImages: 1
   m_TrackedImagePrefab: {fileID: 7223153832450913496, guid: e32ff6fc2fc5f0f499a42884d50d5679,
     type: 3}
 --- !u!114 &722501359
@@ -542,8 +542,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 208.43}
-  m_SizeDelta: {x: 1080, y: 415.896}
+  m_AnchoredPosition: {x: 0, y: 1200}
+  m_SizeDelta: {x: 1080, y: 2399.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &970635024
 MonoBehaviour:

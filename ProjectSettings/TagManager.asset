@@ -8,6 +8,15 @@ TagManager:
   - Pot
   - Food
   - GameManager
+  - Cloth
+  - FishGenPointRight
+  - FishGenPointLeft
+  - purpleFish
+  - whiteFish
+  - dotFish
+  - fishFlyAni
+  - shapeAni
+  - gods
   layers:
   - Default
   - TransparentFX
