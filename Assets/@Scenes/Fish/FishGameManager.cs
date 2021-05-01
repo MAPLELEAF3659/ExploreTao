@@ -15,7 +15,9 @@ public class FishGameManager : MonoBehaviour
     int score;
     public bool isPlaying;
     public Animator loadingAni;
-
+    public BGMManager bgm;
+    public AudioClip winC;
+    public GameObject clickAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +92,7 @@ public class FishGameManager : MonoBehaviour
     public IEnumerator EndDCtrl()
     {
         isPlaying = false;
+        bgm.FadeChangeBGM(winC);
         dialogueController.StartDialogue(endD);
         yield return new WaitUntil(() => dialogueController.isEnd);
         SceneManager.LoadScene("House");
@@ -112,6 +115,7 @@ public class FishGameManager : MonoBehaviour
     }
     public void BackBtn()
     {
+        Instantiate(clickAudio);
         SceneManager.LoadScene("Start");
     }
 }

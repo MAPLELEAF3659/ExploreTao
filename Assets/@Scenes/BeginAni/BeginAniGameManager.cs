@@ -11,11 +11,16 @@ public class BeginAniGameManager : MonoBehaviour
     public Animator beginAni, loadingAni;
     public GameObject pot, fire, fish, crab, shell,flyFish;
     public Text loadingText;
+    public GameObject clickAudio;
+    public BGMManager bgmManager;
+
+    public AudioClip introBGM, notGoodBGM;
 
     void Start()
     {
         StartCoroutine(BeginAni());
     }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -29,6 +34,7 @@ public class BeginAniGameManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         beginAni.SetTrigger("next");
         yield return new WaitForSeconds(5f);
+        bgmManager.FadeChangeBGM(introBGM);
 
         dialogueController.StartDialogue(firstD);
         yield return new WaitUntil(() => dialogueController.isEnd);
@@ -52,6 +58,7 @@ public class BeginAniGameManager : MonoBehaviour
         loadingAni.SetTrigger("fade");
         yield return new WaitForSeconds(2.5f);
         loadingAni.SetTrigger("fade");
+        bgmManager.FadeChangeBGM(notGoodBGM);
 
         dialogueController.StartDialogue(notGoodD);
         yield return new WaitUntil(() => dialogueController.isEnd);
@@ -88,6 +95,7 @@ public class BeginAniGameManager : MonoBehaviour
 
     public void BackBtn()
     {
+        Instantiate(clickAudio);
         SceneManager.LoadScene("start");
     }
 }

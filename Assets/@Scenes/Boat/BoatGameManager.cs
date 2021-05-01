@@ -15,15 +15,19 @@ public class BoatGameManager : MonoBehaviour
     public ARFaceManager faceManager;
     public Text msg;
     public GameObject nextBtn,FishFly;
+    public BGMManager bgm;
+    public GameObject clickAudio;
     //public GameObject video;
 
     public void ImageOnChanged()
     {
+        Instantiate(clickAudio);
         msg.gameObject.SetActive(false);
         StartCoroutine(DialogCtrl());
     }
     public void FaceOnChanged()
     {
+        Instantiate(clickAudio);
         msg.gameObject.SetActive(false);
         nextBtn.SetActive(true);
     }
@@ -62,11 +66,13 @@ public class BoatGameManager : MonoBehaviour
 
     public void NextBtn()
     {
+        Instantiate(clickAudio);
         loadingAni.SetTrigger("fade");
         SceneManager.LoadScene("Fish");
     }
     public void BackBtn()
     {
+        Instantiate(clickAudio);
         SceneManager.LoadScene("start");
     }
     public void GenAroundCamera(GameObject obj, float x, float y, float z)

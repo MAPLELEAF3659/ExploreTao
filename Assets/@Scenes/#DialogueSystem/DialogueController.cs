@@ -10,9 +10,10 @@ public class DialogueController : MonoBehaviour
     public Animator chatBoxAni;
     public Text cText, cName;
     public Image speaker;
+    public GameObject clickAudio;
 
     public float textSpeed;
-    public bool isEnd, isFinish = true;
+    public bool isEnd=true, isFinish = true;
 
     public GameObject gameManager;
 
@@ -26,10 +27,11 @@ public class DialogueController : MonoBehaviour
 
     void Update()
     {
-        if (!isEnd & (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Began
+        if (!isEnd && (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Began
                || Input.GetKeyDown(KeyCode.Mouse0)))
         {
             DisplayNext();
+            Instantiate(clickAudio);
         }
     }
 

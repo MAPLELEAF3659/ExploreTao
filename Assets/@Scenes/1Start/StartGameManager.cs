@@ -8,9 +8,10 @@ public class StartGameManager : MonoBehaviour
 {
     public Text version;
     public Animator loadingAni;
-
+    public GameObject clickAudio;
     public void beginBtnOnClick()
     {
+        Instantiate(clickAudio);
         loadingAni.SetTrigger("fade");
         SceneManager.LoadScene("BeginAnimation");
     }

@@ -309,8 +309,10 @@ MonoBehaviour:
   cText: {fileID: 2461331951155159463}
   cName: {fileID: 3549091257461645233}
   speaker: {fileID: 2487429957879598960}
+  clickAudio: {fileID: 7123709068513572338, guid: 2369f130d3a165645b1fd6d187c8dd25,
+    type: 3}
   textSpeed: 0.02
-  isEnd: 0
+  isEnd: 1
   isFinish: 1
   gameManager: {fileID: 0}
 --- !u!1 &2487429959216324621

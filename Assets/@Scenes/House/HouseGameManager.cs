@@ -16,27 +16,17 @@ public class HouseGameManager : MonoBehaviour
     int count;
     bool isMain, isPailion, isWorkshop, isHouse, isAll;
 
+    public BGMManager bgm;
+    public AudioClip endC;
+    public GameObject clickAudio;
+
     [SerializeField]
     ARTrackedImageManager imageManager;
-   /* void OnEnable() => imageManager.trackedImagesChanged += OnChanged;
-    void OnChanged(ARTrackedImagesChangedEventArgs eventArgs)
-    {
-        foreach (var newImage in eventArgs.added)
-        {
-            messageBox.SetActive(true);
-            message.text = "請利用相機掃描\n半穴居屋周圍的\nNPC";
-            count++;
-            isHouse = true;
-        }
-
-    }*/
     private void Start()
     {
         loadingAni.SetTrigger("fade");
         messageBox.SetActive(true);
         message.text = "請前往半穴居屋\n並利用相機掃描";
-        //StartCoroutine(BuildUpDialogCtrl());
-        //message.text = "請尋找半穴居屋\n周圍的NPC";
     }
     private void Update()
     {
@@ -60,6 +50,7 @@ public class HouseGameManager : MonoBehaviour
                 case "house":
                     if (!isHouse)
                     {
+                        Instantiate(clickAudio);
                         messageBox.SetActive(true);
                         message.text = "請尋找周圍的\nNPC";
                         count++;
@@ -69,6 +60,7 @@ public class HouseGameManager : MonoBehaviour
                 case "main":
                     if (!isMain)
                     {
+                        Instantiate(clickAudio);
                         messageBox.SetActive(false);
                         StartCoroutine(WaitForD(womenD));
                         isMain = true;
@@ -77,6 +69,7 @@ public class HouseGameManager : MonoBehaviour
                 case "workshop":
                     if (!isWorkshop)
                     {
+                        Instantiate(clickAudio);
                         messageBox.SetActive(false);
                         StartCoroutine(WaitForD(manD));
                         isWorkshop = true;
@@ -85,6 +78,7 @@ public class HouseGameManager : MonoBehaviour
                 case "pavilion":
                     if (!isPailion)
                     {
+                        Instantiate(clickAudio);
                         messageBox.SetActive(false);
                         StartCoroutine(WaitForD(sheepD));
                         isPailion = true;
@@ -107,6 +101,7 @@ public class HouseGameManager : MonoBehaviour
         GenAroundCamera(shapeAni, 0, 0,18);
         GameObject.FindGameObjectWithTag("shapeAni").transform.LookAt(Camera.main.transform);
         yield return new WaitForSeconds(4f);
+        bgm.FadeChangeBGM(endC);
         dialogueController.StartDialogue(endD);
         yield return new WaitUntil(() => dialogueController.isEnd);
 
@@ -120,6 +115,7 @@ public class HouseGameManager : MonoBehaviour
     }
     public void BackBtn()
     {
+        Instantiate(clickAudio);
         SceneManager.LoadScene("start");
     }
 }
