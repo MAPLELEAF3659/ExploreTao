@@ -5,7 +5,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - gameManager: {instanceID: 0}
-  - expParticle: {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
+  - expParticle: {fileID: 100000, guid: fe25254b3af3ee142bcc9a36905db845, type: 3}
+  - target: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

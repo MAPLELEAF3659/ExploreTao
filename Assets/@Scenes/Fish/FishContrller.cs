@@ -28,10 +28,11 @@ public class FishContrller : MonoBehaviour
         {
             case "FishGenPointRight":
                 target = GameObject.FindGameObjectWithTag("FishGenPointLeft");
+                transform.Rotate(new Vector3(0,90,0));
                 break;
             case "FishGenPointLeft":
                 target = GameObject.FindGameObjectWithTag("FishGenPointRight");
-                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                transform.Rotate(new Vector3(0, -90, 0));
                 break;
         }
 
@@ -64,7 +65,11 @@ public class FishContrller : MonoBehaviour
     {
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         Instantiate(expParticle, transform);
-        yield return new WaitForSeconds(0.7f);
-        transform.Translate(Camera.main.transform.position);
+        while (Vector3.Distance(transform.position, Camera.main.transform.position) > 1f)
+        {
+            transform.position = Vector3.Lerp(transform.position, Camera.main.transform.position, 0.1f);
+            yield return new WaitForFixedUpdate();
+        }
+        GameObject.Destroy(gameObject);
     }
 }

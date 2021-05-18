@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class settingBtnController : MonoBehaviour
 {
-    Animator settingAni;
-    private void Start()
-    {
-        settingAni = gameObject.GetComponent<Animator>();
-    }
+    public Animator settingAni;
     public void Toggle()
     {
         settingAni.SetTrigger("toggle");
