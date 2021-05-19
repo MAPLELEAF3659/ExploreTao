@@ -9,7 +9,7 @@ public class FishGameManager : MonoBehaviour
     public DialogueController dialogueController;
     public Dialogue gameStartD, endD;
     RaycastHit hit;
-    public GameObject scoreBoard,bucket, genPointL, genPointR,fishHitAudio;
+    public GameObject scoreBoard, bucket, genPointL, genPointR, fishHitAudio;
     public GameObject[] fish;
     public Text scoreText;
     int score;
@@ -57,7 +57,7 @@ public class FishGameManager : MonoBehaviour
             {
                 Instantiate(fishHitAudio);
                 hit.transform.gameObject.GetComponent<FishContrller>().StartCoroutine("FlyToBucket");
-                score+=10;
+                score += 10;
                 scoreText.text = score.ToString("000") + "¤À";
             }
             else if (hit.transform.tag == "dotFish")
@@ -95,7 +95,7 @@ public class FishGameManager : MonoBehaviour
         bgm.FadeChangeBGM(winC);
         dialogueController.StartDialogue(endD);
         yield return new WaitUntil(() => dialogueController.isEnd);
-        SceneManager.LoadScene("House");
+        SceneManager.LoadScene("Bird");
     }
 
     public IEnumerator RandomGenFish()

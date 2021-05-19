@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/@Scenes/Fish/Fish.unity
     guid: dd727753a6d1cf6488b2aad9982b0d19
   - enabled: 1
+    path: Assets/@Scenes/Bird/Bird.unity
+    guid: 82be60432fa57b34d8506a29485b4c3e
+  - enabled: 1
     path: Assets/@Scenes/House/House.unity
     guid: e8d6514d387423c46818b2a19155ec08
   m_configObjects:
