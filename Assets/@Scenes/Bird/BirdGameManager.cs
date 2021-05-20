@@ -37,6 +37,7 @@ public class BirdGameManager : MonoBehaviour
             }
             if (birdHp <= 0)
             {
+                birdHpText.text = "¯Q¾~¦å¶q¡G0/10";
                 isPlaying = false;
                 StartCoroutine(winDCtrl());
             }
@@ -88,6 +89,8 @@ public class BirdGameManager : MonoBehaviour
             time -= Time.deltaTime;
             timeText.text = "®É¶¡:" + time.ToString("000.0") + "¬í";
             yield return new WaitForFixedUpdate();
+            if (!isPlaying)
+                yield return null;
         }
         isPlaying = false;
         StartCoroutine(loseDCtrl());
