@@ -590,7 +590,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b13ab5bf95f92734cb835962cf5671bb, type: 3}
+    m_Font: {fileID: 12800000, guid: 7658db6a0e7d80a41afeff77cef4b32a, type: 3}
     m_FontSize: 113
     m_FontStyle: 0
     m_BestFit: 0
@@ -805,9 +805,9 @@ MonoBehaviour:
     - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
     - "\u4F60"
     - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
-    - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
-    - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
-    - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
+    - "\u9ED1\u7FC5\u982D\u76EE*NEXT*"
+    - "\u9ED1\u7FC5\u982D\u76EE*NEXT*"
+    - "\u9ED1\u7FC5\u982D\u76EE*NEXT*"
     - "\u4F60"
     - "\u4F60*NEXT*"
     - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
@@ -828,9 +828,9 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
     - {fileID: 0}
     - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
-    - {fileID: 21300000, guid: 1488aa167ec5e414fb1a93dc3b53384c, type: 3}
-    - {fileID: 21300000, guid: 591f03e6efecc2a429826f2d14e983e0, type: 3}
-    - {fileID: 21300000, guid: ae9890a5a31ee784e894b22b80daa28c, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
@@ -840,6 +840,9 @@ MonoBehaviour:
   msg: {fileID: 692703130}
   nextBtn: {fileID: 631877492}
   FishFly: {fileID: 2250576419014524960, guid: 265b8f54dcde5c1489ea80964ad4d342, type: 3}
+  pFish: {fileID: 5460303675514465784, guid: 2c73d63c4d7f389499338665cae9db6c, type: 3}
+  dFish: {fileID: 6525847671944056596, guid: b6f9eaaec7df0184e8e14c8a1f47ade7, type: 3}
+  wFish: {fileID: 6879897082798348613, guid: cd9cc3634cd588f48b249c5a3a9bc208, type: 3}
   bgm: {fileID: 1230297913}
   clickAudio: {fileID: 4392786822369098777, guid: 93203ffa03cbedb4f9ea29eedeb63a1a,
     type: 3}

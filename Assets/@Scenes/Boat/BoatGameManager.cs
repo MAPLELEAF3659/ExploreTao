@@ -14,7 +14,7 @@ public class BoatGameManager : MonoBehaviour
     public ARCameraManager aRCamera;
     public ARFaceManager faceManager;
     public Text msg;
-    public GameObject nextBtn,FishFly;
+    public GameObject nextBtn, FishFly, pFish, dFish, wFish;
     public BGMManager bgm;
     public GameObject clickAudio;
     //public GameObject video;
@@ -54,10 +54,31 @@ public class BoatGameManager : MonoBehaviour
         msg.gameObject.SetActive(true);
     }
 
+    int n = 1;
     public void Next()
     {
-        GenAroundCamera(FishFly,0,0,18);
-        GameObject.FindGameObjectWithTag("fishFlyAni").transform.LookAt(Camera.main.transform);
+        switch (n)
+        {
+            case 1:
+                GenAroundCamera(wFish, 0, 0, 3, false);
+                break;
+            case 2:
+                GameObject.Destroy(GameObject.FindGameObjectWithTag("whiteFish"));
+                GenAroundCamera(dFish, 0, 0, 3, false);
+                break;
+            case 3:
+                GameObject.Destroy(GameObject.FindGameObjectWithTag("dotFish"));
+                GenAroundCamera(pFish, 0, 0, 3, false);
+                break;
+            case 4:
+                GameObject.Destroy(GameObject.FindGameObjectWithTag("purpleFish"));
+                GenAroundCamera(FishFly, 0, 0, 18, true);
+                GameObject.FindGameObjectWithTag("fishFlyAni").transform.LookAt(Camera.main.transform);
+                break;
+            default:
+                return;
+        }
+        n++;
     }
 
     public void NextBtn()
@@ -71,10 +92,15 @@ public class BoatGameManager : MonoBehaviour
         Instantiate(clickAudio);
         SceneManager.LoadScene("start");
     }
-    public void GenAroundCamera(GameObject obj, float x, float y, float z)
+    public void GenAroundCamera(GameObject obj, float x, float y, float z, bool faceToCam)
     {
-        Instantiate(obj, Camera.main.transform.position + Camera.main.transform.right * x
-            + Camera.main.transform.up * y + Camera.main.transform.forward * z,
-            Camera.main.transform.rotation);
+        if (faceToCam)
+            Instantiate(obj, Camera.main.transform.position + Camera.main.transform.right * x
+                + Camera.main.transform.up * y + Camera.main.transform.forward * z,
+                Camera.main.transform.rotation);
+        else
+            Instantiate(obj, Camera.main.transform.position + Camera.main.transform.right * x
+                + Camera.main.transform.up * y + Camera.main.transform.forward * z, obj.transform.rotation);
+
     }
 }

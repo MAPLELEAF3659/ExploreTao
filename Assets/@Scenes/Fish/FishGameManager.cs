@@ -58,22 +58,20 @@ public class FishGameManager : MonoBehaviour
                 Instantiate(fishHitAudio);
                 hit.transform.gameObject.GetComponent<FishContrller>().StartCoroutine("FlyToBucket");
                 score += 10;
-                scoreText.text = score.ToString("000") + "分";
             }
             else if (hit.transform.tag == "dotFish")
             {
                 Instantiate(fishHitAudio);
                 hit.transform.gameObject.GetComponent<FishContrller>().StartCoroutine("FlyToBucket");
                 score += 25;
-                scoreText.text = score.ToString("000") + "分";
             }
             else if (hit.transform.tag == "whiteFish")
             {
                 Instantiate(fishHitAudio);
                 hit.transform.gameObject.GetComponent<FishContrller>().StartCoroutine("FlyToBucket");
                 score += 50;
-                scoreText.text = score.ToString("000") + "分";
             }
+            scoreText.text = "分數：" + score.ToString("000");
         }
     }
     public IEnumerator GameIntroCtrl()
@@ -83,7 +81,7 @@ public class FishGameManager : MonoBehaviour
         yield return new WaitUntil(() => dialogueController.isEnd);
         scoreBoard.SetActive(true);
         bucket.SetActive(true);
-        GenAroundCamera(genPointL, 4, -2, 8);
+        GenAroundCamera(genPointL, 4, -2, 10);
         GenAroundCamera(genPointR, -4, -2, 8);
         isPlaying = true;
         StartCoroutine(RandomGenFish());
