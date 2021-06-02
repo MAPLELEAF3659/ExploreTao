@@ -34,12 +34,12 @@ public class BoatGameManager : MonoBehaviour
 
     private void Start()
     {
-        msg.text = "請前往拼板舟\n並以相機掃描";
-        msg.gameObject.SetActive(true);
+        //msg.text = "請前往拼板舟\n並以相機掃描";
+        msg.gameObject.SetActive(false);
         nextBtn.SetActive(false);
 
         loadingAni.SetTrigger("fade");
-        //ImageOnChanged();
+        ImageOnChanged();
     }
 
     IEnumerator DialogCtrl()

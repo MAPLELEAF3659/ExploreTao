@@ -30,6 +30,7 @@ public class StartGameManager : MonoBehaviour
     void Start()
     {
         version.text = "Ver " + Application.version;
+        PlayerPrefs.SetInt("state",0);
         loadingAni.SetTrigger("fade");
     }
 

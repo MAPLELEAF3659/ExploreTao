@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9000053528890139960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9000053528890139962}
+  - component: {fileID: 9000053528890139961}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9000053528890139962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9000053528890139960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 209.18324, y: 248.56293, z: -54.709534}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9000053528890139961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9000053528890139960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65fb23ddf95487f4eb68576a42aa63b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueController: {fileID: 0}
+  manD:
+    name:
+    - "\u7537\u4EBA*TALK*"
+    - "\u7537\u4EBA*TALK*"
+    - "\u7537\u4EBA*TALK*"
+    - "\u7537\u4EBA*TALK*"
+    - "\u4F60"
+    sentence:
+    - "\u55E8\uFF01\u6211\u4F86\u70BA\u4F60\u4ECB\u7D39\u5DE5\u4F5C\u623F"
+    - "\u5DE5\u4F5C\u623F\u662F\u5E72\u6B04\u5F0F\u7684\u5EFA\u7BC9\uFF0C\u5176\u5730\u677F\u9AD8\u5EA6\u8207\u9580\u5916\u5730\u9762\u4E00\u81F4"
+    - "\u4F5C\u70BA\u7761\u7720\u3001\u624B\u5DE5\u85DD\u5236\u4F5C\u3001\u62DB\u5F85\u5BA2\u4EBA\u7B49\u7684\u6D3B\u52D5\u5834\u6240"
+    - "\u9019\u662F\u5B97\u67F1\u7684\u788E\u7247\uFF0C\u6709\u4EC0\u9EBC\u8981\u5E6B\u5FD9\u7684\u5118\u7BA1\u627E\u6211"
+    - "\u8B1D\u8B1D\u60A8\u7684\u5354\u52A9"
+    speaker:
+    - {fileID: 21300000, guid: 70e527087ee6ec04fb094ecb41b9687a, type: 3}
+    - {fileID: 21300000, guid: 70e527087ee6ec04fb094ecb41b9687a, type: 3}
+    - {fileID: 21300000, guid: 70e527087ee6ec04fb094ecb41b9687a, type: 3}
+    - {fileID: 21300000, guid: 016d50a1506b83f41ba81bcb6ac5dd74, type: 3}
+    - {fileID: 0}
+  womenD:
+    name:
+    - "\u5973\u4EBA*TALK*"
+    - "\u5973\u4EBA*TALK*"
+    - "\u5973\u4EBA*TALK*"
+    - "\u5973\u4EBA*TALK*"
+    - "\u4F60"
+    sentence:
+    - "\u9019\u88E1\u662F\u4E3B\u5C4B\uFF0C\u5EFA\u5728\u4F9D\u5730\u5F62\u6316\u6398\u51FA\u7684\u534A\u5730\u4E0B\u5C4B\u57FA\u4E0A"
+    - "\u4E3B\u8981\u7684\u529F\u80FD\u5305\u62EC\u7761\u7720\u3001\u716E\u98DF\u3001\u751F\u80B2\u3001\u8CAF\u85CF\u5BB6\u50B3\u5BF6\u7269\u3001\u5100\u5F0F\u7B49\u6D3B\u52D5\u7684\u5834\u6240"
+    - "\u4E2D\u592E\u5247\u67091~2\u6839\u5B97\u67F1\uFF0C\u4E0D\u50C5\u662F\u5BB6\u65CF\u4EE3\u4EE3\u76F8\u50B3\u7684\u5BF6\u7269\uFF0C\u4E5F\u662F\u793E\u6703\u8072\u671B\u8207\u5730\u4F4D\u7684\u8C61\u5FB5"
+    - "\u9019\u662F\u5B97\u67F1\u7684\u788E\u7247\uFF0C\u795D\u4F60\u5EFA\u5C4B\u9806\u5229"
+    - "\u8B1D\u8B1D\u4F60\u7684\u4ECB\u7D39"
+    speaker:
+    - {fileID: 21300000, guid: 313189e7cd817534eacda67a4860c8ae, type: 3}
+    - {fileID: 21300000, guid: 313189e7cd817534eacda67a4860c8ae, type: 3}
+    - {fileID: 21300000, guid: 313189e7cd817534eacda67a4860c8ae, type: 3}
+    - {fileID: 21300000, guid: f65a53d6cd667e24291028fe134972fe, type: 3}
+    - {fileID: 0}
+  sheepD:
+    name:
+    - "\u7F8A\u7F8A*talking*"
+    - "\u7F8A\u7F8A*talking*"
+    - "\u7F8A\u7F8A*talking*"
+    - "\u4F60"
+    sentence:
+    - "\u54A9~\u6211\u662F\u7F8A\u7F8A\uFF0C\u9019\u88E1\u662F\u6DBC\u53F0"
+    - "\u6DBC\u53F0\u9AD8\u51FA\u5730\u9762\u7D0460~90\u516C\u5206\uFF0C\u5B83\u662F\u4EBA\u5011\u804A\u5929\u3001\u5DE5\u4F5C\u3001\u5348\u61A9\u3001\u9032\u9910\u7684\u5730\u65B9\u5594\uFF0C\u54A9\u54A9"
+    - "\u9019\u500B\u788E\u7247\u7D66\u4F60\u5427\uFF0C\u52A0\u6CB9\u5594\u54A9\u54A9\uFF01"
+    - "\u8B1D\u8B1D\u4F60\u7F8A\u7F8A"
+    speaker:
+    - {fileID: 21300000, guid: b4d767643750e8640bdd4ec7c611e046, type: 3}
+    - {fileID: 21300000, guid: b4d767643750e8640bdd4ec7c611e046, type: 3}
+    - {fileID: 21300000, guid: 3432eb1c9c0e7814ba7beedf8432be27, type: 3}
+    - {fileID: 0}
+  buildUpD:
+    name:
+    - "\u4F60"
+    - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
+    sentence:
+    - "\u592A\u597D\u4E86\uFF0C\u5DF2\u7D93\u8490\u96C6\u4E09\u500B\u788E\u7247\u4E86\uFF0C\u53EA\u8981\u628A\u5B97\u67F1\u7D44\u5408\u8D77\u4F86\u5C31\u5B8C\u6210\u4E86"
+    - "\u5FEB\u4F86\u5EFA\u9020\u5B97\u67F1\u5427"
+    speaker:
+    - {fileID: 0}
+    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
+  endD:
+    name:
+    - "\u9ED1\u7FC5\u98DB\u9B5A*TALK*"
+    - "\u4F60"
+    - "\u9ED1\u7FC5\u98DB\u9B5A*TALK*"
+    - "\u4F60"
+    - "\u8AAA\u660E"
+    - "\u8AAA\u660E"
+    sentence:
+    - "\u7D42\u65BC\u5EFA\u9020\u5B8C\u6210\u4E86\uFF01"
+    - "\u592A\u68D2\u4E86"
+    - "\u6211\u9084\u6709\u9EDE\u4E8B\uFF0C\u5148\u8D70\u4E00\u6B65\u4E86\u3002\u518D\u6B21\u6B61\u8FCE\u4F60\u4F86\u862D\u5DBC\uFF01"
+    - "\u8B1D\u8B1D\u60A8\u7684\u5E6B\u5FD9\uFF01\u6211\u4E00\u5B9A\u6703\u52AA\u529B\u7684\uFF01"
+    - "\u606D\u559C\u4F60\u5C0B\u8A2A\u6240\u6709\u9054\u609F\u5C55\u54C1\uFF0C\u60A8\u662F\u5408\u683C\u7684\u9054\u609F\u5C45\u6C11\u4E86\uFF01"
+    - "\u6CE8\u610F\uFF1A\u5373\u5C07\u8FD4\u56DE\u6A19\u984C\u756B\u9762"
+    speaker:
+    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
+    - {fileID: 0}
+    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  loadingAni: {fileID: 0}
+  shapeAni: {fileID: 3890519602602938970, guid: 97c4ce54651d9a0458f4b4c529b39551,
+    type: 3}
+  messageBox: {fileID: 0}
+  message: {fileID: 0}
+  debug: {fileID: 0}
+  bgm: {fileID: 0}
+  endC: {fileID: 8300000, guid: 38c082a498eb5f24892be3a23b6dbb5c, type: 3}
+  clickAudio: {fileID: 4392786822369098777, guid: 93203ffa03cbedb4f9ea29eedeb63a1a,
+    type: 3}
+  imageManager: {fileID: 0}

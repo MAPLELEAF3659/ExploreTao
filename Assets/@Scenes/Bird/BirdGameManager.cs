@@ -78,8 +78,8 @@ public class BirdGameManager : MonoBehaviour
         yield return new WaitForFixedUpdate();
         dialogueController.StartDialogue(winD);
         yield return new WaitUntil(() => dialogueController.isEnd);
-
-        SceneManager.LoadScene("House");
+        PlayerPrefs.SetInt("state", 2);
+        SceneManager.LoadScene("Explore");
     }
     public IEnumerator Timer()
     {

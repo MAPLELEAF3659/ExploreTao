@@ -27,18 +27,22 @@ public class FishGameManager : MonoBehaviour
         StartCoroutine(GameIntroCtrl());
     }
 
+    float cd;
     // Update is called once per frame
     void Update()
     {
-        if (isPlaying)
+        cd += Time.deltaTime;
+        if (isPlaying & cd>0.5f)
         {
             if ((Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Began))
             {
                 CheckRayHit(Input.GetTouch(0).position);
+                cd = 0;
             }
             else if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 CheckRayHit(Input.mousePosition);
+                cd = 0;
             }
             if (score >= 100)
             {
@@ -93,6 +97,7 @@ public class FishGameManager : MonoBehaviour
         bgm.FadeChangeBGM(winC);
         dialogueController.StartDialogue(endD);
         yield return new WaitUntil(() => dialogueController.isEnd);
+        
         SceneManager.LoadScene("Bird");
     }
 

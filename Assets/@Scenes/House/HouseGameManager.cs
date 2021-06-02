@@ -24,20 +24,22 @@ public class HouseGameManager : MonoBehaviour
     ARTrackedImageManager imageManager;
     private void Start()
     {
-        loadingAni.SetTrigger("fade");
         messageBox.SetActive(true);
-        message.text = "請前往半穴居屋\n並利用相機掃描";
+        message.text = "請尋找周圍的\nNPC";
+        loadingAni.SetTrigger("fade");
+        /*messageBox.SetActive(true);
+        message.text = "請前往半穴居屋\n並利用相機掃描";*/
     }
     private void Update()
     {
         if (isAll)
             return;
-        else if (count == 4 && !isAll)
+        else if (count == 3 && !isAll)
         {
             StartCoroutine(BuildUpDialogCtrl());
             isAll = true;
         }
-        else if (count < 4)
+        else if (count < 3)
             ListAllImages();
     }
     void ListAllImages()
@@ -98,14 +100,8 @@ public class HouseGameManager : MonoBehaviour
         dialogueController.StartDialogue(buildUpD);
         yield return new WaitUntil(() => dialogueController.isEnd);
 
-        GenAroundCamera(shapeAni, 0, 0,18);
-        GameObject.FindGameObjectWithTag("shapeAni").transform.LookAt(Camera.main.transform);
-        yield return new WaitForSeconds(4f);
-        bgm.FadeChangeBGM(endC);
-        dialogueController.StartDialogue(endD);
-        yield return new WaitUntil(() => dialogueController.isEnd);
-
-        SceneManager.LoadScene("Start");
+        PlayerPrefs.SetInt("state",3);
+        SceneManager.LoadScene("Explore");
     }
     public void GenAroundCamera(GameObject obj, float x, float y, float z)
     {

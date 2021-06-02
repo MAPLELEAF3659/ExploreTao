@@ -18,6 +18,7 @@ TagManager:
   - shapeAni
   - gods
   - bird
+  - guide
   layers:
   - Default
   - TransparentFX

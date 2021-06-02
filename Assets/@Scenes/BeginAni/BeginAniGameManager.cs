@@ -16,6 +16,7 @@ public class BeginAniGameManager : MonoBehaviour
 
     public AudioClip introBGM, notGoodBGM;
 
+
     void Start()
     {
         StartCoroutine(BeginAni());
@@ -64,7 +65,8 @@ public class BeginAniGameManager : MonoBehaviour
         yield return new WaitUntil(() => dialogueController.isEnd);
         loadingText.text = "Loading";
         loadingAni.SetTrigger("fade");
-        SceneManager.LoadScene("Boat");
+        PlayerPrefs.SetInt("state", 1);
+        SceneManager.LoadScene("Explore");
     }
 
     IEnumerator PotAni()
