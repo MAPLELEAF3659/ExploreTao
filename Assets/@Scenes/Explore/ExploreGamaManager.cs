@@ -28,6 +28,8 @@ public class ExploreGamaManager : MonoBehaviour
             storyMesh.material = floor1mat;
             floor1.SetActive(true);
             floor2.SetActive(false);
+            floor360.transform.Rotate(0, 276.78f, 0);
+            floor1.transform.Rotate(0, 276.78f, 0);
             msg.text = "請根據指示前往\n1F拼板舟";
         }
         else if (state == 2)//before house game
@@ -66,10 +68,12 @@ public class ExploreGamaManager : MonoBehaviour
             if ((Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Began))
             {
                 CheckRayHit(Input.GetTouch(0).position);
+                msgBox.SetActive(false);
             }
             else if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 CheckRayHit(Input.mousePosition);
+                msgBox.SetActive(false);
             }
         }
     }

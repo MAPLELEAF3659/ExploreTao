@@ -39,7 +39,7 @@ public class BoatGameManager : MonoBehaviour
         nextBtn.SetActive(false);
 
         loadingAni.SetTrigger("fade");
-        ImageOnChanged();
+        //ImageOnChanged();
     }
 
     IEnumerator DialogCtrl()
