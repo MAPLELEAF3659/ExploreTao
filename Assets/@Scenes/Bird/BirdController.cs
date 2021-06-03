@@ -7,7 +7,7 @@ public class BirdController : MonoBehaviour
     Vector3 newPos;
     public float speed = 1.5f;
     public float rotateSpeed = 5.0f;
-    public float minX = -5, maxX = 5, minY = -2, maxY = 10, minZ = 10, maxZ = 20;
+    public float minX = -5, maxX = 5, minY = -2, maxY = 10, minZ = 5, maxZ = 15;
     public bool isMoving;
     public GameObject bird;
 

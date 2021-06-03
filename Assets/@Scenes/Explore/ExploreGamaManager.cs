@@ -35,6 +35,8 @@ public class ExploreGamaManager : MonoBehaviour
             storyMesh.material = floor2mat;
             floor1.SetActive(false);
             floor2.SetActive(true);
+            floor360.transform.Rotate(0, -21.53f, 0);
+            floor2.transform.Rotate(0, -21.53f, 0); 
             msg.text = "請根據指示前往\n2F半穴居屋";
         }
         else if (state == 3)//before end game
@@ -42,6 +44,8 @@ public class ExploreGamaManager : MonoBehaviour
             storyMesh.material = floor2mat;
             floor1.SetActive(false);
             floor2.SetActive(true);
+            floor360.transform.Rotate(0, 105.73f, 0);
+            floor2.transform.Rotate(0, 105.73f, 0);
             msg.text = "請根據指示前往\n2F達悟族宗柱";
         }
         else

@@ -38,6 +38,7 @@ public class BirdGameManager : MonoBehaviour
             if (birdHp <= 0)
             {
                 birdHpText.text = "烏鴉血量：0/10";
+                StopCoroutine(Timer());
                 isPlaying = false;
                 StartCoroutine(winDCtrl());
             }
@@ -48,6 +49,12 @@ public class BirdGameManager : MonoBehaviour
             else
                 cd = 0;
             cdText.text = "CD:" + cd.ToString("0.0") + "s";
+            if (time <= 0)
+            {
+                isPlaying = false;
+                StartCoroutine(loseDCtrl());
+            }
+
         }
     }
 
@@ -76,6 +83,7 @@ public class BirdGameManager : MonoBehaviour
     public IEnumerator winDCtrl()
     {
         yield return new WaitForFixedUpdate();
+        GameObject.Destroy(GameObject.FindGameObjectWithTag("bird"));
         dialogueController.StartDialogue(winD);
         yield return new WaitUntil(() => dialogueController.isEnd);
         PlayerPrefs.SetInt("state", 2);
@@ -84,16 +92,14 @@ public class BirdGameManager : MonoBehaviour
     public IEnumerator Timer()
     {
         yield return new WaitForFixedUpdate();
-        while (isPlaying && time > 0)
+        while (time > 0)
         {
             time -= Time.deltaTime;
             timeText.text = "時間:" + time.ToString("000.0") + "秒";
             yield return new WaitForFixedUpdate();
-            if (!isPlaying)
-                yield return null;
         }
-        isPlaying = false;
-        StartCoroutine(loseDCtrl());
+        time = 0;
+        timeText.text = "時間:" + time.ToString("000.0") + "秒";
     }
     public void GenAroundCenter(GameObject obj, GameObject center, Vector3 posOffset)
     {
