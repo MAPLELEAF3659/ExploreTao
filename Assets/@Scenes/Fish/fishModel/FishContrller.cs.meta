@@ -6,8 +6,6 @@ MonoImporter:
   defaultReferences:
   - gameManager: {instanceID: 0}
   - expParticle: {fileID: 100000, guid: fe25254b3af3ee142bcc9a36905db845, type: 3}
-  - waterParticle: {fileID: 1687118924408352, guid: 77c69ec12208c4c4380d15e30b6f8f68,
-      type: 3}
   - target: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
