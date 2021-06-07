@@ -118,16 +118,16 @@ Material:
     - _OcclusionStrength: 1
     - _Outline: 0.0132
     - _Parallax: 0.02
-    - _RampSmooth: 0.407
-    - _RampThreshold: 0.175
+    - _RampSmooth: 0.01
+    - _RampThreshold: 0.466
     - _RimAmount: 0.716
-    - _RimSmooth: 0.1
-    - _RimThreshold: 0.524
+    - _RimSmooth: 0.28
+    - _RimThreshold: 0.435
     - _Saturation: 0
-    - _Shininess: 0.34
+    - _Shininess: 0.62
     - _SmoothnessTextureChannel: 0
     - _Source: 0
-    - _SpecSmooth: 0.251
+    - _SpecSmooth: 0.255
     - _SpecularHighlights: 1
     - _SpecularIntensity: 0.2
     - _SpreadDetailMap: 0

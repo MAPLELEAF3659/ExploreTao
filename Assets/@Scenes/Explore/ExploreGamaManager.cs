@@ -6,10 +6,8 @@ using UnityEngine.UI;
 
 public class ExploreGamaManager : MonoBehaviour
 {
-    public GameObject floor360;
     MeshRenderer storyMesh;
-    public Material floor1mat, floor2mat;
-    public GameObject floor1, floor2;
+    public GameObject floor1, floor2_1,floor2_2;
     public Text msg;
     public GameObject msgBox;
     int state;
@@ -21,35 +19,26 @@ public class ExploreGamaManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        storyMesh = floor360.GetComponent<MeshRenderer>();
         state = PlayerPrefs.GetInt("state");
         if (state == 1)//Before Boat Game
         {
-            storyMesh.material = floor1mat;
             floor1.SetActive(true);
-            floor2.SetActive(false);
-            //floor360.transform.Rotate(0, 276.78f, 0);
-            //floor1.transform.Rotate(0, 276.78f, 0);
-            Camera.main.transform.Rotate(0, -180f, 0);
+            floor2_1.SetActive(false);
+            floor2_2.SetActive(false);
             msg.text = "請根據指示前往\n1F拼板舟";
         }
         else if (state == 2)//before house game
         {
-            storyMesh.material = floor2mat;
             floor1.SetActive(false);
-            floor2.SetActive(true);
-            //floor360.transform.Rotate(0, -21.53f, 0);
-            //floor2.transform.Rotate(0, -21.53f, 0); 
-            Camera.main.transform.Rotate(0, 140f, 0);
+            floor2_1.SetActive(true);
+            floor2_2.SetActive(false);
             msg.text = "請根據指示前往\n2F半穴居屋";
         }
         else if (state == 3)//before end game
         {
-            storyMesh.material = floor2mat;
             floor1.SetActive(false);
-            floor2.SetActive(true);
-            //floor360.transform.Rotate(0, 105.73f, 0);
-            //floor2.transform.Rotate(0, 105.73f, 0);
+            floor2_1.SetActive(false);
+            floor2_2.SetActive(true);
             msg.text = "請根據指示前往\n2F達悟族宗柱";
         }
         else
@@ -88,24 +77,21 @@ public class ExploreGamaManager : MonoBehaviour
             print(hit.transform.name);
             if (hit.transform.name == "BoatPin")
             {
-                floor1.SetActive(false);
+                //floor1.SetActive(false);
                 GenAroundCamera(guide, 0, 0, 2);
                 StartCoroutine(GuideTalking(boatGuide));
-
             }
             else if (hit.transform.name == "HousePin")
             {
-                floor2.SetActive(false);
+                //floor2_1.SetActive(false);
                 GenAroundCamera(guide, 0, 0, 2);
                 StartCoroutine(GuideTalking(houseGuide));
-
             }
             else if (hit.transform.name == "StickPin")
             {
-                floor2.SetActive(false);
+                //floor2_2.SetActive(false);
                 GenAroundCamera(guide, 0, 0, 2);
                 StartCoroutine(GuideTalking(stickGuide));
-
             }
         }
     }
