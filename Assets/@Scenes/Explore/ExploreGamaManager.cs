@@ -28,8 +28,9 @@ public class ExploreGamaManager : MonoBehaviour
             storyMesh.material = floor1mat;
             floor1.SetActive(true);
             floor2.SetActive(false);
-            floor360.transform.Rotate(0, 276.78f, 0);
-            floor1.transform.Rotate(0, 276.78f, 0);
+            //floor360.transform.Rotate(0, 276.78f, 0);
+            //floor1.transform.Rotate(0, 276.78f, 0);
+            Camera.main.transform.Rotate(0, -180f, 0);
             msg.text = "請根據指示前往\n1F拼板舟";
         }
         else if (state == 2)//before house game
@@ -37,8 +38,9 @@ public class ExploreGamaManager : MonoBehaviour
             storyMesh.material = floor2mat;
             floor1.SetActive(false);
             floor2.SetActive(true);
-            floor360.transform.Rotate(0, -21.53f, 0);
-            floor2.transform.Rotate(0, -21.53f, 0); 
+            //floor360.transform.Rotate(0, -21.53f, 0);
+            //floor2.transform.Rotate(0, -21.53f, 0); 
+            Camera.main.transform.Rotate(0, 140f, 0);
             msg.text = "請根據指示前往\n2F半穴居屋";
         }
         else if (state == 3)//before end game
@@ -46,8 +48,8 @@ public class ExploreGamaManager : MonoBehaviour
             storyMesh.material = floor2mat;
             floor1.SetActive(false);
             floor2.SetActive(true);
-            floor360.transform.Rotate(0, 105.73f, 0);
-            floor2.transform.Rotate(0, 105.73f, 0);
+            //floor360.transform.Rotate(0, 105.73f, 0);
+            //floor2.transform.Rotate(0, 105.73f, 0);
             msg.text = "請根據指示前往\n2F達悟族宗柱";
         }
         else
