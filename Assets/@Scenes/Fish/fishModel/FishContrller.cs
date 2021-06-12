@@ -5,7 +5,7 @@ using UnityEngine;
 public class FishContrller : MonoBehaviour
 {
     public FishGameManager gameManager;
-    public GameObject expParticle;
+    public GameObject expParticle,water;
     bool isMoving = true;
 
     public List<GameObject> startPoint;
@@ -42,6 +42,7 @@ public class FishContrller : MonoBehaviour
         cos = a / c;
         sin = b / c;
         GetComponent<Rigidbody>().velocity = new Vector3(forceX * cos, forceY, forceZ * sin);
+        Instantiate(water,chooseStartPoint.transform);
     }
 
     void Update()

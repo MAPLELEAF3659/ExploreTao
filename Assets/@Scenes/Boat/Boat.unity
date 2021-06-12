@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44869083, g: 0.49874294, b: 0.57568043, a: 1}
+  m_IndirectSpecularColor: {r: 0.45140046, g: 0.5008933, b: 0.5723188, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 105591301}
   - component: {fileID: 105591300}
-  - component: {fileID: 105591302}
   - component: {fileID: 105591303}
   m_Layer: 0
   m_Name: AR Session Origin
@@ -170,23 +169,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &105591302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105591299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedLibrary: {fileID: 11400000, guid: 495194fce73112e4997c373ea7da6a32,
-    type: 2}
-  m_MaxNumberOfMovingImages: 5
-  m_TrackedImagePrefab: {fileID: 5215273561882329799, guid: 1f0fed8a67e1f1643a8c3589cddbe6d4,
-    type: 3}
 --- !u!114 &105591303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,7 +690,7 @@ MonoBehaviour:
   dialogueController: {fileID: 1280269769}
   introBoatD:
     name:
-    - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
+    - "\u9ED1\u7FC5\u982D\u76EE*GUID*"
     - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
     - "\u4F60"
     - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
@@ -717,7 +699,8 @@ MonoBehaviour:
     - "\u9ED1\u7FC5\u982D\u76EE*NEXT*"
     - "\u4F60"
     - "\u4F60*NEXT*"
-    - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
+    - "\u9ED1\u7FC5\u982D\u76EE*GUID*"
+    - "\u8AAA\u660E*DSRY*"
     sentence:
     - "\u9019\u8258\u62FC\u677F\u821F\u662F\u6211\u5011\u65CF\u88E1\u6700\u5BCC\u76DB\u540D\u7684\u6A19\u8A8C\uFF0C\u4E5F\u662F\u9054\u609F\u65CF\u4EBA\u7684\u7CBE\u795E\u8C61\u5FB5"
     - "\u8239\u7684\u982D\u5C3E\u756B\u6709\u300C\u795E\u4E4B\u773C\u300D\uFF0C\u5177\u6709\u907F\u90AA\u3001\u6307\u5F15\u65B9\u5411\u8207\u4FDD\u4F51\u5E73\u5B89\u7684\u610F\u601D"
@@ -730,17 +713,19 @@ MonoBehaviour:
     - "\u8B1D\u8B1D\u60A8\u7684\u4ECB\u7D39\uFF01"
     - "\u7591?\u9060\u65B9\u597D\u50CF\u6709\u4EC0\u9EBC\u6771\u897F\u885D\u904E\u4F86..."
     - "\u662F\u98DB\u9B5A\u7FA4\uFF01\u5FEB\uFF01\u7A7F\u4E0A\u9019\u4EF6\u8863\u670D\uFF0C\u6355\u98DB\u9B5A\u7684\u6642\u9593\u5230\u4E86\uFF01"
+    - "\u5C07\u76F8\u6A5F\u5C0D\u6E96\u60A8\u7684\u81C9\u90E8\u5373\u53EF\u7A7F\u4E0A\u8863\u670D"
     speaker:
-    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
-    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
-    - {fileID: 0}
-    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   loadingAni: {fileID: 1255408325}
   aRCamera: {fileID: 1263666233}
   faceManager: {fileID: 105591303}
@@ -944,7 +929,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 60
-  field of view: 100
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1382,13 +1367,13 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1439,13 +1424,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940617814}
-  m_LocalRotation: {x: 0.3585691, y: -0.24032529, z: 0.09607828, w: 0.8969063}
-  m_LocalPosition: {x: -5.088011, y: 1.5009468, z: 5.628581}
+  m_LocalRotation: {x: 0.25488704, y: -0.16773133, z: 0.04494348, w: 0.95125127}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 43.581, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: -20, z: 0}
 --- !u!1001 &8994577862629389106
 PrefabInstance:
   m_ObjectHideFlags: 0

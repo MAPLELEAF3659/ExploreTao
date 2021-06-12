@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.45140046, g: 0.5008933, b: 0.5723188, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -287,7 +287,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.9303958, b: 0.740566, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -345,13 +345,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460310964}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.25488704, y: -0.16773133, z: 0.04494348, w: 0.95125127}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: -20, z: 0}
 --- !u!1 &578547053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,27 +1199,36 @@ MonoBehaviour:
   dialogueController: {fileID: 1793224054}
   startD:
     name:
-    - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
-    - "\u70CF\u9D09*TALK*"
-    - "\u9ED1\u7FC5\u982D\u76EE*TALK*"
+    - "\u90AA\u60E1\u70CF\u9D09*BIRD*"
+    - "\u904A\u6232\u8AAA\u660E*DSRY*"
     sentence:
-    - "\u628A\u9B5A\u66EC\u4E7E\u5C31\u53EF\u4EE5\u5403\u56C9"
     - "\u54C8\u54C8\uFF01\u9019\u4E9B\u98DB\u9B5A\u90FD\u662F\u6211\u7684\uFF01"
-    - "\u90AA\u60E1\u7684\u70CF\u9D09\u4F86\u4E86\uFF01\u5FEB\u8D95\u8D70\u7260\uFF01"
+    - "\u90AA\u60E1\u70CF\u9D09\u6703\u96A8\u6A5F\u98DB\u52D5\uFF0C\u9EDE\u64CA\u87A2\u5E55\u5C04\u51FA\u9B5A\u69CD\u653B\u64CA\u7260\uFF01"
     speaker:
-    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
-    - {fileID: 21300000, guid: f0707634b4c35d8418c0a79cc12bad30, type: 3}
-    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
   winD:
     name:
+    - "\u90AA\u60E1\u70CF\u9D09*BIRD*"
+    - "\u9ED1\u9C2D\u982D\u76EE*GUID*"
     - "\u9ED1\u9C2D\u982D\u76EE*TALK*"
+    - "\u4F60"
     - "\u9ED1\u9C2D\u982D\u76EE*TALK*"
+    - "\u4F60"
     sentence:
+    - "\u53EF\u60E1\uFF01\u6211\u6703\u56DE\u4F86\u7684\uFF01"
     - "\u592A\u597D\u4E86\uFF01\u90AA\u60E1\u70CF\u9D09\u7D42\u65BC\u8D70\u4E86"
-    - "\u6211\u5011\u5FEB\u53BB\u5EFA\u9020\u623F\u5B50\u5427\uFF01\u53EF\u4EE5\u628A\u525B\u525B\u6355\u5230\u7684\u98DB\u9B5A\u9001\u7D66\u4F86\u5E6B\u5FD9\u7684\u4EBA\u7576\u4F5C\u916C\u52DE"
+    - "\u6211\u5011\u56DE\u5BB6\u5427\u3002"
+    - "\u53EF\u662F\u6211\u624D\u525B\u5230\u9019\uFF0C\u9023\u5BB6\u90FD\u6C92\u6709..."
+    - "\u6211\u53EF\u4EE5\u8B93\u5929\u795E\u6D3E\u5E7E\u4F4D\u5E6B\u624B\u4F86\uFF0C\u525B\u525B\u6355\u5230\u7684\u98DB\u9B5A\u53EF\u4EE5\u7576\u4F5C\u916C\u52DE"
+    - "\u90A3\u9084\u7B49\u4EC0\u9EBC\uFF01\u6211\u5011\u8D70\u5427"
     speaker:
-    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
-    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   loseD:
     name:
     - "\u63D0\u793A"
@@ -1229,7 +1238,7 @@ MonoBehaviour:
     - {fileID: 0}
   loadingAni: {fileID: 1175399517}
   isPlaying: 0
-  birdHp: 10
+  birdHp: 5
   time: 100
   cd: 1
   birdHpText: {fileID: 2095124020}
@@ -1468,7 +1477,7 @@ MonoBehaviour:
   m_FocusMode: -1
   m_LightEstimationMode: -1
   m_AutoFocus: 1
-  m_LightEstimation: -1
+  m_LightEstimation: 0
   m_FacingDirection: 1
 --- !u!114 &1944854081
 MonoBehaviour:
@@ -1654,4 +1663,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u70CF\u9D09\u8840\u91CF\uFF1A10/10"
+  m_Text: "\u70CF\u9D09\u8840\u91CF\uFF1A5/5"

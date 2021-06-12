@@ -870,6 +870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   expParticle: {fileID: 100000, guid: fe25254b3af3ee142bcc9a36905db845, type: 3}
+  water: {fileID: 1687118924408352, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
   startPoint: []
   target: {fileID: 0}
   forceX: 7

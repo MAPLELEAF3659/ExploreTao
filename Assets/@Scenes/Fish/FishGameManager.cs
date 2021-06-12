@@ -9,7 +9,7 @@ public class FishGameManager : MonoBehaviour
     public DialogueController dialogueController;
     public Dialogue gameStartD, endD;
     RaycastHit hit;
-    public GameObject scoreBoard, bucket, genPointL, genPointR, fishHitAudio;
+    public GameObject scoreBoard, bucket, genPointL, genPointR, fishHitAudio, waterSurface;
     public GameObject[] fish;
     public Text scoreText;
     int score;
@@ -32,7 +32,7 @@ public class FishGameManager : MonoBehaviour
     void Update()
     {
         cd += Time.deltaTime;
-        if (isPlaying & cd>0.5f)
+        if (isPlaying & cd > 0.5f)
         {
             if ((Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Began))
             {
@@ -44,7 +44,7 @@ public class FishGameManager : MonoBehaviour
                 CheckRayHit(Input.mousePosition);
                 cd = 0;
             }
-            if (score >= 100)
+            if (score >= 300)
             {
                 isPlaying = false;
                 StartCoroutine(EndDCtrl());
@@ -87,6 +87,7 @@ public class FishGameManager : MonoBehaviour
         bucket.SetActive(true);
         GenAroundCamera(genPointL, 4, -2, 10);
         GenAroundCamera(genPointR, -4, -2, 8);
+        GenAroundCamera(waterSurface, 0, -2, 0);
         isPlaying = true;
         StartCoroutine(RandomGenFish());
     }
@@ -97,7 +98,7 @@ public class FishGameManager : MonoBehaviour
         bgm.FadeChangeBGM(winC);
         dialogueController.StartDialogue(endD);
         yield return new WaitUntil(() => dialogueController.isEnd);
-        
+
         SceneManager.LoadScene("Bird");
     }
 
