@@ -37,24 +37,18 @@ public class BirdGameManager : MonoBehaviour
             }
             if (birdHp <= 0)
             {
-                birdHpText.text = "烏鴉血量：0/10";
-                StopCoroutine(Timer());
+                birdHpText.text = "烏鴉血量：0/5";
                 isPlaying = false;
+                scoreBoard.SetActive(false);
                 StartCoroutine(winDCtrl());
             }
             else
-                birdHpText.text = "烏鴉血量：" + birdHp + "/10";
+                birdHpText.text = "烏鴉血量：" + birdHp + "/5";
             if (cd > 0)
                 cd -= Time.deltaTime;
             else
                 cd = 0;
             cdText.text = "CD:" + cd.ToString("0.0") + "s";
-            if (time <= 0)
-            {
-                isPlaying = false;
-                StartCoroutine(loseDCtrl());
-            }
-
         }
     }
 
@@ -92,14 +86,25 @@ public class BirdGameManager : MonoBehaviour
     public IEnumerator Timer()
     {
         yield return new WaitForFixedUpdate();
-        while (time > 0)
+        while (isPlaying)
         {
             time -= Time.deltaTime;
-            timeText.text = "時間:" + time.ToString("000.0") + "秒";
-            yield return new WaitForFixedUpdate();
+            if (time <= 0)
+            {
+                time = 0;
+                timeText.text = "時間:" + time.ToString("000.0") + "秒";
+                isPlaying = false;
+                StartCoroutine(loseDCtrl());
+                yield break;
+            }
+            else if (!isPlaying)
+                yield break;
+            else
+            {
+                timeText.text = "時間:" + time.ToString("000.0") + "秒";
+                yield return new WaitForFixedUpdate();
+            }
         }
-        time = 0;
-        timeText.text = "時間:" + time.ToString("000.0") + "秒";
     }
     public void GenAroundCenter(GameObject obj, GameObject center, Vector3 posOffset)
     {

@@ -19,6 +19,8 @@ TagManager:
   - gods
   - bird
   - guide
+  - talkingNPC
+  - sign
   layers:
   - Default
   - TransparentFX

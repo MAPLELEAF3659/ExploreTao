@@ -313,6 +313,8 @@ MonoBehaviour:
   isEnd: 1
   isFinish: 1
   gameManager: {fileID: 0}
+  guide: {fileID: 4000669802012190146, guid: d488ed956ed7ef046883480724590bcf, type: 3}
+  bird: {fileID: 4432167980971432679, guid: 030b3ee485d6e53458e2033da3fea58c, type: 3}
 --- !u!1 &2487429959216324621
 GameObject:
   m_ObjectHideFlags: 0

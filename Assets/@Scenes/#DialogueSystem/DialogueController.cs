@@ -13,9 +13,10 @@ public class DialogueController : MonoBehaviour
     public GameObject clickAudio;
 
     public float textSpeed;
-    public bool isEnd=true, isFinish = true;
+    public bool isEnd = true, isFinish = true;
 
     public GameObject gameManager;
+    public GameObject guide, bird;
 
     void Start()
     {
@@ -102,12 +103,27 @@ public class DialogueController : MonoBehaviour
                     }
                     break;
                 case "*TALK*":
-                    chatBoxAni.SetTrigger("talking");
+                    if (GameObject.FindGameObjectWithTag("talkingNPC"))
+                        GameObject.FindGameObjectWithTag("talkingNPC").GetComponent<Animator>().SetTrigger("talking");
                     break;
                 case "*GODS*":
                     GameObject.FindGameObjectWithTag("gods").GetComponent<Text>().text = sentence;
                     isFinish = true;
                     yield break;
+                case "*GUID*":
+                    if (GameObject.FindGameObjectWithTag("talkingNPC"))
+                        GameObject.Destroy(GameObject.FindGameObjectWithTag("talkingNPC"));
+                    Instantiate(guide, Camera.main.transform.position, Camera.main.transform.rotation);
+                    break;
+                case "*BIRD*":
+                    if (GameObject.FindGameObjectWithTag("talkingNPC"))
+                        GameObject.Destroy(GameObject.FindGameObjectWithTag("talkingNPC"));
+                    Instantiate(bird, Camera.main.transform.position, Camera.main.transform.rotation);
+                    break;
+                case "*DSRY*":
+                    if (GameObject.FindGameObjectWithTag("talkingNPC"))
+                        GameObject.Destroy(GameObject.FindGameObjectWithTag("talkingNPC"));
+                    break;
             }
         }
         else

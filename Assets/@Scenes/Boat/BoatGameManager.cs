@@ -19,12 +19,6 @@ public class BoatGameManager : MonoBehaviour
     public GameObject clickAudio;
     //public GameObject video;
 
-    public void ImageOnChanged()
-    {
-        Instantiate(clickAudio);
-        msg.gameObject.SetActive(false);
-        StartCoroutine(DialogCtrl());
-    }
     public void FaceOnChanged()
     {
         Instantiate(clickAudio);
@@ -38,8 +32,8 @@ public class BoatGameManager : MonoBehaviour
         msg.gameObject.SetActive(false);
         nextBtn.SetActive(false);
 
+        StartCoroutine(DialogCtrl());
         loadingAni.SetTrigger("fade");
-        //ImageOnChanged();
     }
 
     IEnumerator DialogCtrl()
@@ -60,6 +54,7 @@ public class BoatGameManager : MonoBehaviour
         switch (n)
         {
             case 1:
+                GameObject.Destroy(GameObject.FindGameObjectWithTag("talkingNPC"));
                 GenAroundCamera(wFish, 0, 0, 3, false);
                 break;
             case 2:

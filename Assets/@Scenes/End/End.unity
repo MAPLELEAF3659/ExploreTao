@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.45140046, g: 0.5008933, b: 0.5723188, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -992,13 +992,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400787771}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.25488704, y: -0.16773133, z: 0.04494348, w: 0.95125127}
   m_LocalPosition: {x: 7.5730066, y: 0.08284572, z: 11.944973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: -20, z: 0}
 --- !u!1001 &1988546451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1170,11 +1170,11 @@ MonoBehaviour:
   dialogueController: {fileID: 1988546453}
   endD:
     name:
-    - "\u9ED1\u7FC5\u98DB\u9B5A*TALK*"
+    - "\u9ED1\u7FC5\u98DB\u9B5A*GUID*"
     - "\u4F60"
     - "\u9ED1\u7FC5\u98DB\u9B5A*TALK*"
     - "\u4F60"
-    - "\u8AAA\u660E"
+    - "\u8AAA\u660E*DSRY*"
     - "\u8AAA\u660E"
     sentence:
     - "\u7D42\u65BC\u5EFA\u9020\u5B8C\u6210\u4E86\uFF01"
@@ -1184,9 +1184,9 @@ MonoBehaviour:
     - "\u606D\u559C\u4F60\u5C0B\u8A2A\u6240\u6709\u9054\u609F\u5C55\u54C1\uFF0C\u60A8\u662F\u5408\u683C\u7684\u9054\u609F\u5C45\u6C11\u4E86\uFF01"
     - "\u6CE8\u610F\uFF1A\u5373\u5C07\u8FD4\u56DE\u6A19\u984C\u756B\u9762"
     speaker:
-    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
     - {fileID: 0}
-    - {fileID: 21300000, guid: 2c1edf9abf575a94eb3bbeb76bf4c1c6, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}

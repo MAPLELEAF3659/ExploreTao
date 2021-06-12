@@ -20,20 +20,20 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: fa1a6d3b48af926428a7b81d516b394c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 50c84794551f87e4c853970dcb8093f7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowTex:
-        m_Texture: {fileID: 2800000, guid: fa1a6d3b48af926428a7b81d516b394c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 50c84794551f87e4c853970dcb8093f7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _RampSmooth: 0.073
-    - _RampThreshold: 0.401
-    - _RimSmooth: 0.066
-    - _RimThreshold: 0.411
-    - _Shininess: 0.21
-    - _SpecSmooth: 0.148
+    - _RampSmooth: 0
+    - _RampThreshold: 0.69
+    - _RimSmooth: 0
+    - _RimThreshold: 0.376
+    - _Shininess: 3.17
+    - _SpecSmooth: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _HColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}

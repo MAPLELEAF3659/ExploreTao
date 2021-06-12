@@ -78,19 +78,19 @@ public class ExploreGamaManager : MonoBehaviour
             if (hit.transform.name == "BoatPin")
             {
                 //floor1.SetActive(false);
-                GenAroundCamera(guide, 0, 0, 2);
+                //GenAroundCamera(guide, 0, 0, 2);
                 StartCoroutine(GuideTalking(boatGuide));
             }
             else if (hit.transform.name == "HousePin")
             {
                 //floor2_1.SetActive(false);
-                GenAroundCamera(guide, 0, 0, 2);
+                //GenAroundCamera(guide, 0, 0, 2);
                 StartCoroutine(GuideTalking(houseGuide));
             }
             else if (hit.transform.name == "StickPin")
             {
                 //floor2_2.SetActive(false);
-                GenAroundCamera(guide, 0, 0, 2);
+                //GenAroundCamera(guide, 0, 0, 2);
                 StartCoroutine(GuideTalking(stickGuide));
             }
         }
@@ -100,7 +100,8 @@ public class ExploreGamaManager : MonoBehaviour
     {
         isHit = true;
         yield return new WaitForFixedUpdate();
-        GameObject.FindGameObjectWithTag("guide").transform.LookAt(Camera.main.transform.position);
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("sign"))
+            GameObject.Destroy(obj);
         dialogueController.StartDialogue(dialogue);
         yield return new WaitUntil(() => dialogueController.isEnd);
 
