@@ -31,6 +31,8 @@ public class StartGameManager : MonoBehaviour
     {
         version.text = "Ver " + Application.version;
         PlayerPrefs.SetInt("state",0);
+        if (!PlayerPrefs.HasKey("volume"))
+            PlayerPrefs.SetFloat("volume",0.5f);
         loadingAni.SetTrigger("fade");
     }
 

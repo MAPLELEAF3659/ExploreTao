@@ -23,7 +23,6 @@ public class BirdGameManager : MonoBehaviour
     {
         scoreBoard.SetActive(false);
         StartCoroutine(startDCtrl());
-        bgm.ChangeBGM(battleBGM);
         loadingAni.SetTrigger("fade");
     }
 

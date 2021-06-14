@@ -10,10 +10,14 @@ public class settingBtnController : MonoBehaviour
     public AudioSource bgm;
     public Slider volumeSlider;
     public Font pixelFont, genFont;
+    public float volume;
 
     public void Start()
     {
-        bgm = GameObject.Find("BGMManager").GetComponent<AudioSource>();
+        bgm = GameObject.FindGameObjectWithTag("BGMManager").GetComponent<AudioSource>();
+        volume = PlayerPrefs.GetFloat("volume");
+        bgm.volume = volume;
+        volumeSlider.value = volume;
     }
 
     public void Toggle()
@@ -50,6 +54,7 @@ public class settingBtnController : MonoBehaviour
     public void OnVolumeChanged()
     {
         bgm.volume = volumeSlider.value;
+        PlayerPrefs.SetFloat("volume",volumeSlider.value);
     }
 
 }

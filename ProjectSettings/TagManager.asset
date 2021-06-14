@@ -21,6 +21,7 @@ TagManager:
   - guide
   - talkingNPC
   - sign
+  - BGMManager
   layers:
   - Default
   - TransparentFX

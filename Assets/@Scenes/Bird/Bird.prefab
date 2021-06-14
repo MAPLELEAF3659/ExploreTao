@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575481259399352570}
   - component: {fileID: -6532077457280226199}
-  - component: {fileID: -7162386344654136221}
+  - component: {fileID: 3612313208116751327}
   m_Layer: 0
   m_Name: Bird
   m_TagString: bird
@@ -55,7 +55,7 @@ MonoBehaviour:
   maxZ: 20
   isMoving: 0
   bird: {fileID: 0}
---- !u!65 &-7162386344654136221
+--- !u!65 &3612313208116751327
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,8 +66,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.74, z: 1}
+  m_Center: {x: 0, y: -0.23, z: 0}
 --- !u!1001 &6391974356090058914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83,17 +83,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a62b0f1cc4139404fa565249ab17ce85,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a62b0f1cc4139404fa565249ab17ce85,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a62b0f1cc4139404fa565249ab17ce85,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a62b0f1cc4139404fa565249ab17ce85,
         type: 3}
