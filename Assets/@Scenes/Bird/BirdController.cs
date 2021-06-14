@@ -26,6 +26,6 @@ public class BirdController : MonoBehaviour
     void PositionChange()
     {
         newPos = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ));
-        bird.transform.LookAt(newPos);
+        transform.LookAt(newPos);
     }
 }

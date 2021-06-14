@@ -15,13 +15,16 @@ public class BirdGameManager : MonoBehaviour
     public Text birdHpText, timeText, cdText;
     public GameObject scoreBoard;
     public GameObject spearStartPos;
+    public BGMManager bgm;
+    public AudioClip battleBGM, winBGM;
 
     // Start is called before the first frame update
     void Start()
     {
         scoreBoard.SetActive(false);
-        loadingAni.SetTrigger("fade");
         StartCoroutine(startDCtrl());
+        bgm.ChangeBGM(battleBGM);
+        loadingAni.SetTrigger("fade");
     }
 
     // Update is called once per frame
@@ -40,6 +43,7 @@ public class BirdGameManager : MonoBehaviour
                 birdHpText.text = "¯Q¾~¦å¶q¡G0/5";
                 isPlaying = false;
                 scoreBoard.SetActive(false);
+                bgm.FadeChangeBGM(winBGM);
                 StartCoroutine(winDCtrl());
             }
             else

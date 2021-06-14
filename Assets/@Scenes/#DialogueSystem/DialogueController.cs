@@ -26,16 +26,6 @@ public class DialogueController : MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
     }
 
-    void Update()
-    {
-        if (!isEnd && (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Began
-               || Input.GetKeyDown(KeyCode.Mouse0)))
-        {
-            DisplayNext();
-            Instantiate(clickAudio);
-        }
-    }
-
     public void StartDialogue(Dialogue dialogue)
     {
         print("[System]Dialogue is begin");
@@ -61,6 +51,7 @@ public class DialogueController : MonoBehaviour
 
     public void DisplayNext()
     {
+        Instantiate(clickAudio);
         if (sentences.Count == 0)
         {
             chatBoxAni.SetBool("toggle", false);
