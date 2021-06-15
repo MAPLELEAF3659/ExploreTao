@@ -1281,9 +1281,11 @@ MonoBehaviour:
     - {fileID: 0}
   loadingAni: {fileID: 1175399517}
   isPlaying: 0
-  birdHp: 5
+  birdHp: 3
   time: 100
-  cd: 1
+  cd: 0.5
+  birdHPMax: 3
+  cdMax: 0.5
   birdHpText: {fileID: 2095124020}
   timeText: {fileID: 1998672337}
   cdText: {fileID: 916452352}

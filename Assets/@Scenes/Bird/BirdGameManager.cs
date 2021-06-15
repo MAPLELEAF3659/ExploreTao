@@ -11,7 +11,7 @@ public class BirdGameManager : MonoBehaviour
     public Dialogue startD, winD, loseD;
     public Animator loadingAni;
     public bool isPlaying;
-    public float birdHp = 10, time = 100, cd = 1f;
+    public float birdHp, time = 100, cd = 1f,birdHPMax=5f,cdMax=1f;
     public Text birdHpText, timeText, cdText;
     public GameObject scoreBoard;
     public GameObject spearStartPos;
@@ -35,18 +35,18 @@ public class BirdGameManager : MonoBehaviour
                 || Input.GetKeyDown(KeyCode.Mouse0)) && cd <= 0)
             {
                 GenAroundCenter(spear, spearStartPos, new Vector3(0, 0, 0));
-                cd = 1f;
+                cd = cdMax;
             }
             if (birdHp <= 0)
             {
-                birdHpText.text = "¯Q¾~¦å¶q¡G0/5";
+                birdHpText.text = "¯Q¾~¦å¶q¡G0/"+birdHPMax;
                 isPlaying = false;
                 scoreBoard.SetActive(false);
                 bgm.FadeChangeBGM(winBGM);
                 StartCoroutine(winDCtrl());
             }
             else
-                birdHpText.text = "¯Q¾~¦å¶q¡G" + birdHp + "/5";
+                birdHpText.text = "¯Q¾~¦å¶q¡G" + birdHp + "/" + birdHPMax;
             if (cd > 0)
                 cd -= Time.deltaTime;
             else
@@ -61,6 +61,7 @@ public class BirdGameManager : MonoBehaviour
         dialogueController.StartDialogue(startD);
         yield return new WaitUntil(() => dialogueController.isEnd);
 
+        birdHp = birdHPMax;
         GenAroundCenter(bird, Camera.main.gameObject, new Vector3(0, 0, 10));
         GenAroundCenter(fishRack, Camera.main.gameObject, new Vector3(0, -5, 15));
         scoreBoard.SetActive(true);

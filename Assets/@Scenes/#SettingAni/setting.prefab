@@ -203,7 +203,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -141}
-  m_SizeDelta: {x: 434.3675, y: 117.9147}
+  m_SizeDelta: {x: 508.1476, y: 117.9147}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9165948699270260699
 CanvasRenderer:
@@ -406,6 +406,7 @@ MonoBehaviour:
   volumeSlider: {fileID: 4667367878640739956}
   pixelFont: {fileID: 12800000, guid: 37255342fda00d74aa7a3fdcdb5f271d, type: 3}
   genFont: {fileID: 12800000, guid: 7658db6a0e7d80a41afeff77cef4b32a, type: 3}
+  volume: 0
 --- !u!1 &2262243422205545766
 GameObject:
   m_ObjectHideFlags: 0

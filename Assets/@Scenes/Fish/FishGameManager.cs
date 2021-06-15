@@ -44,7 +44,7 @@ public class FishGameManager : MonoBehaviour
                 CheckRayHit(Input.mousePosition);
                 cd = 0;
             }
-            if (score >= 300)
+            if (score >= 100)
             {
                 isPlaying = false;
                 StartCoroutine(EndDCtrl());
@@ -73,7 +73,7 @@ public class FishGameManager : MonoBehaviour
             {
                 Instantiate(fishHitAudio);
                 hit.transform.gameObject.GetComponent<FishContrller>().StartCoroutine("FlyToBucket");
-                score += 50;
+                score += 40;
             }
             scoreText.text = "¤À¼Æ¡G" + score.ToString("000");
         }
@@ -85,8 +85,8 @@ public class FishGameManager : MonoBehaviour
         yield return new WaitUntil(() => dialogueController.isEnd);
         scoreBoard.SetActive(true);
         bucket.SetActive(true);
-        GenAroundCamera(genPointL, 4, -2, 10);
-        GenAroundCamera(genPointR, -4, -2, 8);
+        GenAroundCamera(genPointL, 2, -2, 10);
+        GenAroundCamera(genPointR, -2, -2, 6);
         GenAroundCamera(waterSurface, 0, -2, 0);
         isPlaying = true;
         StartCoroutine(RandomGenFish());
